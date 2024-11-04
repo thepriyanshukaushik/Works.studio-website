@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Bungee&family=Cinzel+Decorative:wght@400;700;900&family=Doppio+One&family=MedievalSharp&family=Oxanium:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sawarabi+Mincho&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Freight big pro";
+}
+
+#main {
+    background-color: black;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#loader {
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* display: none; */
+    z-index: 99;
+
+}
+
+#yellow1 {
+    height: 100%;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 8;
+}
+
+#yellow2 {
+    height: 100%;
+    width: 100%;
+    background-color: #F5E41B;
+    position: absolute;
+    z-index: 7;
+}
+
+#loader video {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    z-index: 6;
+}
+
+#loader h1 {
+    font-size: 6.2vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -3px;
+    color: #fff;
+    position: relative;
+    z-index: 9;
+}
+
+#nav {
+    position: absolute;
+    width: 100%;
+    height: 10px;
+    z-index: 10;
+    padding: 30px 50px;
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    background-color: #F5E41B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#page1 h1 {
+    font-size: 6.2vw;
+    font-weight: 100;
+    line-height: 5.5vw;
+    letter-spacing: -3px;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.elem {
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+}
+
+.elem .blur {
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(#f5e31bdd, #F5E41B, #f5e31bda);
+    box-shadow: 10px 0px 20px 20px #F5E41B, 10px 0px -20px 20px #F5E41B;
+    height: 100%;
+    z-index: 8;
+}
+
+.elem h2 {
+    font-size: 6.8vw;
+    text-transform: uppercase;
+    font-weight: 100;
+    position: relative;
+    z-index: 9;
+    font-style: normal;
+    line-height: 5vw;
+}
+
+.elem:hover .moving {
+    transform: translate(0, -45%) scaleY(1);
+}
+
+.elem:hover .moving .moving-in h5 {
+    opacity: 1;
+}
+
+.elem .moving {
+    background-color: #F5E41B;
+    width: 100%;
+    white-space: nowrap;
+    padding: 10px 0;
+    top: 50%;
+    transform: translate(0, -45%) scaleY(0);
+    position: absolute;
+    transition: all ease .3s;
+}
+
+.elem .moving .moving-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: moving;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+}
+
+.elem .moving .moving-in h5 {
+    color: black;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 17px;
+    transition: all ease .5s;
+    opacity: 0;
+    transition-delay: .1s;
+    font-family: gilroy;
+    text-transform: uppercase;
+    margin-right: 20px;
+    gap: 35px;
+}
+
+.elem:hover h2 {
+    font-style: italic;
+    color: rgb(0, 0, 0);
+}
+
+
+@keyframes moving {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#page3 {
+    min-height: 100%;
+    width: 100%;
+    background-color: #fbfbfb;
+}
+
+.image-div {
+    display: flex;
+    justify-content: start;
+    padding: 15px 10px;
+    align-items: start;
+    gap: 30px;
+}
+
+.cont1 {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    padding: 10px;
+    flex-direction: column;
+
+}
+
+.cont2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    flex-direction: column;
+}
+
+.image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 600px;
+    width: 550px;
+}
+
+.portion {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.portion h1 {
+    font-size: 22px;
+    margin: 0 10px;
+    font-family: 'Cinzel Decorative';
+    font-weight: 250;
+}
+
+.cont2 video {
+    width: 550px;
+}
+
+.cont1 :nth-child(1) :nth-child(1) {
+    width: 350px;
+    height: 450px;
+    margin: 10px;
+}
+
+.cont1 :nth-child(2) :nth-child(1) {
+    width: 700px;
+    height: 550px;
+    margin: 20px 10px;
+}
+
+.cont1 :nth-child(3) :nth-child(1) {
+    width: 500px;
+    height: 500px;
+    margin: 20px 10px;
+}
+
+.cont2 :nth-child(1) :nth-child(1) {
+    width: 600px;
+    height: 650px;
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.cont2 :nth-child(2) :nth-child(1) {
+    width: 550px;
+    padding: 10px;
+}
+
+.cont2 :nth-child(3) :nth-child(1) {
+    width: 650px;
+    height: 700px;
+    padding: 10px;
+    margin-top: 50px;
+}
+
+.lastvid {
+    width: 1200px;
+    height: 100%;
+    padding: 20px;
+    margin-left: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lastvid video {
+    width: 1000px;
+    padding: 10px;
+
+}
+
+.lastvid h1 {
+    font-size: 25px;
+    margin: 0 10px;
+    font-family: 'Cinzel Decorative';
+    font-weight: 200;
+}
+
+.cont3{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px 30px;
+    gap: 30px;
+    font-size: 28px;
+}
+
+.cont3 .bighead{
+    line-height: 43px;
+}
+.cont3 .head{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.bighead .head  :nth-child(1){
+    font-family: 'Glass Antiqua';  
+    font-weight: 100;
+ 
+}
+.bighead .head  :nth-child(2){
+    font-family: 'Glass Antiqua'; 
+    font-weight: 100;
+}
+.bighead :nth-child(2){
+    font-family: 'Glass Antiqua'; 
+    font-weight: 100;
+}
+
+.cont3 button{
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+.cont3 button a{
+    color: rgb(117, 117, 117);
+    text-decoration: none;
+
+}
+
+.footer{
+    height: 23vh;
+    width: 100vw;
+    background-color: #F5E41B;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 15px;
+}
+.first{
+    padding: 0 2px;
+    font-weight: 500;
+    font-size: 15px;
+}
+.first h3{
+    font-family: 'Sawarabi Mincho';
+}
+
+.second{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    gap: 45px;
+}
+
+
+
+
+.second .secondfirst{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 150px;
+    padding: 0 40px;
+    margin: 0 50px;
+}
+
+
+.sec1 ul , .sec2 ul {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+ul li{
+    list-style: none;
+}
+ul li a {
+    font-family: 'Sawarabi Mincho';
+    text-decoration: none;
+    color: black;
+    font-weight: 599;
+    font-size: 15px;
+
+}
+#email{
+    background-color: transparent;
+    width: 300px;
+    margin: 0 20px;
+    padding: 2px 10px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+#email::placeholder{
+    color: black;
+    font-weight: 599;
+    font-family: 'Sawarabi Mincho';
+    font-size: 15px;
+}
+
+
+
